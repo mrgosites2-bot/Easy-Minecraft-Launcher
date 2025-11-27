@@ -11,7 +11,8 @@ Un launcher simple y ligero para Minecraft, creado en HTML, CSS y JavaScript.
 ---
 
 ## 🚀 **Demo en línea**
-Prueba el launcher directamente en tu navegador:  
+"En sí no es el launcher"
+Prueba el juego que lanza el launcher directamente en tu navegador:  
 👉 **[Play a Demo](https://mrgosites2-bot.github.io/Easy-Minecraft-Launcher/)**
 
 ---
