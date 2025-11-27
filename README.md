@@ -3,5 +3,5 @@
 
 A simple Minecraft Launcher
 
-# [![Play a Demo](https://img.shields.io/github/v/release/Heroic-Games-Launcher/HeroicGamesLauncher?style=for-the-badge)](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/latest)
+# [![Play a Demo]](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/latest)
 
