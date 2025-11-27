@@ -14,16 +14,16 @@ Prueba el launcher directamente en tu navegador:
 
 ## 📌 **Características**
 - Interfaz simple y fácil de usar  
-- Diseño ligero  
+- Diseñado para ser ligero y rápido  
 - Código abierto y editable  
-- Incluye una demo en GitHub Pages  
+- Incluye una demostración en GitHub Pages  
+- Versiones de Minecraft accesibles directamente desde el navegador  
 
 ---
 
 ## 📂 **Estructura del proyecto**
 
 Easy-Minecraft-Launcher/
-
 ├─ 1.12.html
 
 ├─ 1.5.2.html
@@ -38,11 +38,12 @@ Easy-Minecraft-Launcher/
 ---
 
 ## 🛠 **Cómo usar**
-1. Descarga Easy.Minecraft.Launcher.Setup.1.0.0.exe o la versión portable.
-2. Instala Easy Minecraft Launcher desde el setup o abrelo desde la versión portable.
-> *(Opcional: Puedes descargar Source code.zip para crear un fork.)*
+1. Descarga **Easy.Minecraft.Launcher.Setup.1.0.0.exe** o la **versión portable** desde Releases.  
+2. Instala Easy Minecraft Launcher desde el setup **o** abre directamente el ejecutable portable.  
+
+> *(Opcional: Puedes descargar `Source code.zip` si quieres crear un fork o modificar el proyecto.)*
 
 ---
 
 ## 📜 **Licencia**
-Este proyecto está bajo la licencia MIT. Puedes usarlo, modificarlo y distribuirlo libremente.
+Este proyecto está bajo licencia **MIT**. Puedes usarlo, modificarlo y distribuirlo libremente.
