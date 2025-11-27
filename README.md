@@ -3,5 +3,5 @@
 
 A simple Minecraft Launcher
 
-# [![Play a Demo]](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/latest)
+# [!Play a Demo!](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/latest)
 
