@@ -51,7 +51,7 @@ Easy-Minecraft-Launcher/
 
 ---
 
-🔄 Actualizaciones Semanales
+## 🔄 Actualizaciones Semanales
 
 Easy Minecraft Launcher recibe actualizaciones cada jueves.
 Cada semana se publican mejoras, correcciones y pequeñas funciones nuevas para mantener el launcher estable y fácil de usar.
@@ -60,8 +60,6 @@ Cada semana se publican mejoras, correcciones y pequeñas funciones nuevas para 
 📌 v1.1.0 — Demo Web añadida
 
 Nueva versión con modo demo online
-
-Mejoras menores en diseño
 
 📌 v1.0.0 — Primera versión estable
 
