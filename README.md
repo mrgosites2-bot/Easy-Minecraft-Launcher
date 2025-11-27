@@ -3,5 +3,5 @@
 
 A simple Minecraft Launcher
 
-# [Play a Demo!](https://mrgosites2-bot.github.io/Easy-Minecraft-Launcher/))
+# [Play a Demo!](https://mrgosites2-bot.github.io/Easy-Minecraft-Launcher/)
 
