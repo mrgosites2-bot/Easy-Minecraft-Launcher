@@ -30,6 +30,7 @@ Prueba el juego que lanza el launcher directamente en tu navegador:
 ## 📂 **Estructura del proyecto**
 
 Easy-Minecraft-Launcher/
+
 ├─ 1.12.html
 
 ├─ 1.5.2.html
