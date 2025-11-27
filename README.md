@@ -56,12 +56,13 @@ Easy-Minecraft-Launcher/
 Easy Minecraft Launcher recibe actualizaciones cada jueves.
 Cada semana se publican mejoras, correcciones y pequeñas funciones nuevas para mantener el launcher estable y fácil de usar.
 
-🗂️ Historial de Versiones
-📌 v1.1.0 — Demo Web añadida
+## 🗂️ Historial de Versiones:
+
+## 📌 v1.1.0 — Demo Web añadida
 
 Nueva versión con modo demo online
 
-📌 v1.0.0 — Primera versión estable
+## 📌 v1.0.0 — Primera versión estable
 
 Versión instalable (.exe)
 
