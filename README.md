@@ -1,6 +1,7 @@
 # **Easy-Minecraft-Launcher**
 
 [![Releases](https://img.shields.io/github/v/release/mrgosites2-bot/Easy-Minecraft-Launcher?label=Latest%20Release)](https://github.com/mrgosites2-bot/Easy-Minecraft-Launcher/releases)
+![Updated Weekly](https://img.shields.io/badge/Updates-Weekly-brightgreen)
 
 Un launcher simple y ligero para Minecraft, creado en HTML, CSS y JavaScript.
 
@@ -47,6 +48,28 @@ Easy-Minecraft-Launcher/
 2. Instala Easy Minecraft Launcher desde el setup **o** abre directamente el ejecutable portable.  
 
 > *(Opcional: Puedes descargar `Source code.zip` si quieres crear un fork o modificar el proyecto.)*
+
+---
+
+🔄 Actualizaciones Semanales
+
+Easy Minecraft Launcher recibe actualizaciones cada jueves.
+Cada semana se publican mejoras, correcciones y pequeñas funciones nuevas para mantener el launcher estable y fácil de usar.
+
+🗂️ Historial de Versiones
+📌 v1.1.0 — Demo Web añadida
+
+Nueva versión con modo demo online
+
+Mejoras menores en diseño
+
+📌 v1.0.0 — Primera versión estable
+
+Versión instalable (.exe)
+
+Versión portable
+
+Lanzamiento inicial del proyecto
 
 ---
 
