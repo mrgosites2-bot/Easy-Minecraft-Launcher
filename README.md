@@ -1,7 +1,7 @@
 # **Easy-Minecraft-Launcher**
 
- **[![Releases](https://img.shields.io/github/v/release/mrgosites2-bot/Easy-Minecraft-Launcher?label=Latest%20Release)](https://github.com/mrgosites2-bot/Easy-Minecraft-Launcher/releases)
- **[![Updated Weekly](https://img.shields.io/badge/Updates-Weekly-brightgreen)
+ [![Releases](https://img.shields.io/github/v/release/mrgosites2-bot/Easy-Minecraft-Launcher?label=Latest%20Release)](https://github.com/mrgosites2-bot/Easy-Minecraft-Launcher/releases)
+ ![Updated Weekly](https://img.shields.io/badge/Updates-Weekly-brightgreen)
 
 Un launcher simple y ligero para Minecraft, creado en HTML, CSS y JavaScript.
 
