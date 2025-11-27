@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Easy Minecraft Launcher</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1220; --panel:#0f1724; --accent:#6dd3ff; --muted:#9aa6b2; --glass: rgba(255,255,255,0.04);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+    body{
+      background: linear-gradient(180deg,#071226 0%, #07182a 60%);
+      color:#e6eef6; display:flex;align-items:center;justify-content:center;padding:32px
+    }
+    .launcher{
+      width:1200px; max-width:calc(100% - 48px); border-radius:14px; overflow:hidden; display:grid; grid-template-columns:380px 1fr; box-shadow: 0 14px 50px rgba(2,6,23,0.7);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.03);
+    }
+
+    .sidebar{background:linear-gradient(180deg,#0b1624,#08111a); padding:32px; display:flex;flex-direction:column;gap:22px}
+    .logo{font-family:'Press Start 2P',monospace; font-size:20px; letter-spacing:2px; color:var(--accent); text-shadow:0 2px 0 rgba(0,0,0,0.6)}
+    .user-card{background:var(--glass); padding:14px; border-radius:10px; display:flex;gap:14px; align-items:center}
+    .avatar{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,#9ad0ff,#6dd3ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042033;font-size:20px}
+    .user-info{flex:1}
+    .username{font-weight:700;font-size:16px}
+    .uid{color:var(--muted);font-size:14px}
+
+    .play-box{margin-top:auto}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border-radius:10px;border:none;cursor:pointer;font-weight:700;font-size:15px}
+    .btn-play{background:linear-gradient(90deg,#00c2ff,#0068ff); color:white; box-shadow: 0 8px 24px rgba(0,110,255,0.18)}
+    .btn-settings{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.03);padding:10px 14px}
+
+    .version-list{background:rgba(255,255,255,0.02); padding:12px;border-radius:8px;max-height:220px;overflow:auto}
+    .version{display:flex;justify-content:space-between;align-items:center;padding:10px;border-radius:6px;margin-bottom:8px}
+    .version .name{font-weight:600;font-size:15px}
+    .version .desc{color:var(--muted);font-size:13px}
+
+    .content{padding:40px 36px}
+    .top-row{display:flex;justify-content:space-between;gap:12px}
+    .title{font-family:'Press Start 2P',monospace;color:#fff;font-size:26px}
+    .version-info{color:var(--muted);align-self:center;font-size:15px}
+
+    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.45)}
+    .modal .panel{width:480px;background:#071022;padding:24px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+
+    @media(max-width:880px){
+      .launcher{grid-template-columns:1fr;}
+      .sidebar{order:2}
+    }
+  </style>
+</head>
+<body>
+  <div class="launcher" role="application" aria-label="Launcher estilo Minecraft">
+    <aside class="sidebar">
+      <div class="logo">Easy Minecraft Launcher</div>
+
+      <div class="user-card">
+        <div class="avatar" id="avatar"></div>
+        <div class="user-info">
+          <div class="username" id="usernameDisplay">Cuenta</div>
+        </div>
+        <button class="btn btn-settings" id="btn-account">Cambiar Nombre</button>
+      </div>
+
+      <div class="version-list" aria-label="Lista de versiones">
+        <div class="version"><div><div class="name">Minecraft 1.12</div><div class="desc"></div></div><button class="btn" onclick="selectVersion('1.12')">Seleccionar</button></div>
+        <div class="version"><div><div class="name">Minecraft 1.8.8</div><div class="desc"></div></div><button class="btn" onclick="selectVersion('1.8.8')">Seleccionar</button></div>
+        <div class="version"><div><div class="name">Minecraft 1.5.2</div><div class="desc"></div></div><button class="btn" onclick="selectVersion('1.5.2')">Seleccionar</button></div>
+      </div>
+
+      <div class="play-box">
+        <div style="margin-bottom:8px;color:var(--muted);font-size:14px">Versión seleccionada: <strong id="versionText">1.12</strong></div>
+        <button class="btn btn-play" id="btnPlay">JUGAR</button>
+      </div>
+    </aside>
+
+    <main class="content">
+      <div class="top-row">
+        <div>
+          <div class="title">Easy Minecraft Launcher</div>
+          <div class="version-info">Selecciona una versión para jugar</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal para cambiar nombre -->
+  <div class="modal" id="modal">
+    <div class="panel">
+      <h3 style="margin:0 0 10px 0">Cuenta</h3>
+      <label style="display:block;margin-bottom:8px;color:var(--muted)">Nombre de jugador</label>
+      <input id="nameInput" style="width:100%;padding:10px;border-radius:8px;background:#06101a;border:1px solid rgba(255,255,255,0.03);color:#fff" value="Zeko">
+      <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:14px">
+        <button class="btn btn-settings" id="modalSave">Guardar</button>
+        <button class="btn btn-settings" id="modalClose">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const btnPlay = document.getElementById('btnPlay');
+    const versionText = document.getElementById('versionText');
+    const modal = document.getElementById('modal');
+    const btnAccount = document.getElementById('btn-account');
+    const modalClose = document.getElementById('modalClose');
+    const modalSave = document.getElementById('modalSave');
+    const nameInput = document.getElementById('nameInput');
+    const usernameDisplay = document.getElementById('usernameDisplay');
+    const nameAvatar = document.getElementById('avatar');
+
+    function selectVersion(ver){
+      versionText.textContent = ver;
+      localStorage.setItem('selectedVersion', ver);
+    }
+
+    btnPlay.addEventListener('click', ()=>{
+      const ver = versionText.textContent;
+      const user = usernameDisplay.textContent;
+      if (ver == "1.12")
+      {
+        console.log(ver);
+        window.location.href = "./Minecraft/1.12.html";
+      }
+      if (ver == "1.8.8")
+      {
+        console.log(ver);
+        window.location.href = "./Minecraft/1.8.8.html";
+      }
+      if (ver == "1.5.2")
+      {
+        console.log(ver);
+        window.location.href = "./Minecraft/1.5.2.html";
+      }
+    });
+
+    btnAccount.addEventListener('click', ()=>{ modal.style.display='flex'; });
+    modalClose.addEventListener('click', ()=>{ modal.style.display='none'; });
+
+    modalSave.addEventListener('click', ()=>{
+      const newName = nameInput.value.trim();
+      if(newName){
+        usernameDisplay.textContent = newName;
+        nameAvatar.textContent = newName[0];
+        localStorage.setItem('username', newName);
+        modal.style.display='none';
+      }
+    });
+
+    (function(){
+      const savedVer = localStorage.getItem('selectedVersion');
+      if(savedVer) versionText.textContent = savedVer;
+      const savedName = localStorage.getItem('username');
+      if(savedName){
+        usernameDisplay.textContent = savedName;
+        nameAvatar.textContent = savedName[0];
+        nameInput.value = savedName;
+      }
+    })();
+  </script>
+</body>
+</html>
