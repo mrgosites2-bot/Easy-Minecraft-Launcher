@@ -47,3 +47,4 @@ Easy-Minecraft-Launcher/
 
 ## 📜 **Licencia**
 Este proyecto está bajo licencia **MIT**. Puedes usarlo, modificarlo y distribuirlo libremente.
+<img width="1536" height="1024" alt="Logo (2)" src="https://github.com/user-attachments/assets/813b4f1e-7926-415b-ae56-44e385c5b9b5" />
